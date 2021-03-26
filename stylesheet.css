@@ -16,8 +16,9 @@ body {
 }
 
 .container {
-    border: 2px solid;
+    border: 1px solid grey;
     width: 20rem;
+    background: linear-gradient(rgb(0, 0, 0), rgb(26, 26, 26));
 }
 
 .weather-description {
