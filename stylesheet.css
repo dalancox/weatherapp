@@ -16,9 +16,12 @@ body {
 }
 
 .container {
-    border: 1px solid grey;
+    border: 1px solid white;
     width: 20rem;
-    background: linear-gradient(rgb(0, 0, 0), rgb(26, 26, 26));
+}
+
+.container:active  {
+    display: none;
 }
 
 .weather-description {
@@ -70,3 +73,5 @@ body {
 .degree-section h2 {
     font-size: 40px;
 }
+
+
