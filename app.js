@@ -23,7 +23,7 @@ window.addEventListener('load', ()=> {
             //grabbing the open weather api 
             //using proxy for local development
             //const proxy = 'https://cors-anywhere.herokuapp.com/';
-            const api = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=e430828eaa2a466ac69e449d7b72800b`;
+            const api = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=bf1e610e28791c2bad5a789dc1d0ce52`;
 
  
 
@@ -90,11 +90,6 @@ window.addEventListener('load', ()=> {
         });
     }else {
         //error message if geolocation doesn't work
-
-        let errorMessage = document.createElement('div');
-        errorMessage.classList.add('errMsg');
-        errorMessage.innerText = "Your geolocation isn't  working or its disabled in your browser.";
-
         console.log(`Broswer doesn't support geolocation`);
     }
 });
