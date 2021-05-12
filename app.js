@@ -23,7 +23,7 @@ window.addEventListener('load', ()=> {
             //grabbing the open weather api 
             //using proxy for local development
             //const proxy = 'https://cors-anywhere.herokuapp.com/';
-            const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=e430828eaa2a466ac69e449d7b72800b`;
+            const api = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=e430828eaa2a466ac69e449d7b72800b`;
 
  
 
