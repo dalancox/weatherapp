@@ -21,10 +21,10 @@ window.addEventListener('load', ()=> {
             lat = position.coords.latitude;
             
             //grabbing the open weather api 
-            //using proxy for local development
-            //const proxy = 'https://cors-anywhere.herokuapp.com/';
-            const api = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=bf1e610e28791c2bad5a789dc1d0ce52`;
-            
+            //using proxy for local development                       
+            const proxy = 'https://cors-anywhere.herokuapp.com/';
+            const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=e430828eaa2a466ac69e449d7b72800b`;
+            console.log(api);
  
 
             //using fetch to get api from server
@@ -33,11 +33,10 @@ window.addEventListener('load', ()=> {
                 .then(data => {
                     //putting data in a json format
                     return data.json();
-                console.log(api);
                 })
                     .then(data => {
                         //grapping the data and putting it into my variables
-                        console.log(data);
+                        console.log(data.timezone);
                         let temp = data.main.temp;
                         console.log(temp);
                         let cityName = data.name;
@@ -83,15 +82,20 @@ window.addEventListener('load', ()=> {
                         location.textContent = `${cityName}, ${country}`;
                         displayIcon.src = iconUrl;
 
+                        //grabbing local timezone of user
 
+                        timezone = data.timezone;
+                        var d = new Date((new Date().getTime())-25200*1000);
 
+                        //d.toISOString();
 
+                        console.log(d);
                     })
 
         });
     }else {
         //error message if geolocation doesn't work
-        console.log(`Broswer doesn't support geolocation`);
+
     }
 });
 
