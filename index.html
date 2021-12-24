@@ -8,31 +8,26 @@
     <title>Weather App</title>
 </head>
 <body>
-<div class="container">
-    <div class="description">
-        <h1 class="weather-description">description</h1>
-    </div>
-    <div class="icon-container">
-        <img class="icon" src="#">
-    </div>
 
-    <div class="temperature">
-        <div class="degree-section">
-            <h2 class="temp-degree">F</h2>
-            <span>F</span>
+    <div class="hero">
+        <div class="card">
+            <div class="input-container">
+                <input id="city-name" spellcheck="true" placeholder="City"/>
+                <button type="submit" id="submit">GO</button>
+            </div>
+            <p id="error"></p>
+            <div class="weather-info">
+                <h1>Weather in {city}</h1>
+            </div>
         </div>
-        <div class="location">Placeholder</div>
     </div>
-</div>
-
-<div class="info">
-    <ul>
-        <a href="https://dalancox.com"><li>Portfolio Page</li></a>
-        <a href="https://openweathermap.org/api"><li>API Webpage</li></a>
-    </ul>
-</div>
-
-
-    <script src="app.js"></script>
+    <div class="info">
+        <ul>
+            <a href="https://dalancox.com"><li>Portfolio Page</li></a>
+            <a href="https://openweathermap.org/api"><li>API Webpage</li></a>
+        </ul>
+    </div>
+<script src="app.js"></script>    
 </body>
 </html>
+
